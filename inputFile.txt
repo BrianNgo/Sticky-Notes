@@ -1,0 +1,10 @@
+1st Line!
+Second Line!
+3rd Line!
+New Line!
+New Line!
+New Line!
+New Line!
+New Line!
+New Line from Console!
+Another Line from Console!
