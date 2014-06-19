@@ -4,17 +4,18 @@ use warnings;
 use Tk;
 use DateTime;
 
-my $fileName = "inputFile.txt";
+my $fileName = "inputFile.txt"; # The input file's name
 my $mw = MainWindow->new; # Create new main window
 $mw->geometry("500x300+0+0"); # Position on the left corner
-$mw->title(getDate());
+$mw->title(getDate()); # Set the title to the current date
 my $textField = $mw->Text(-background => "yellow",
 			  -font => "verdana 15")->pack; 
-checkFile($fileName);
+checkFile($fileName); # Check the input file
 
+# Get the new input from text field
 my $input = "";
 $mw->bind("<Return>" => sub {$input = $textField->get("1.0", "end");}); 
-MainLoop;
+MainLoop; # Infinite loop
 
 # Save the new strings to input file
 if (!($input eq "")) {
