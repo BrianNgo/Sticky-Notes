@@ -14,7 +14,8 @@ checkFile($fileName); # Check the input file
 
 # Get the new input from text field
 my $input = "";
-$mw->repeat(600, sub {$input = $textField->get("1.0", "end");});
+# Save the text field repeatedly each 1000ms
+$mw->repeat(1000, sub {$input = $textField->get("1.0", "end");});
 MainLoop; # Infinite loop
 
 # Save the new strings to input file
